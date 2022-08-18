@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QRReader'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'qr読み込みを簡略化します。'
 
   s.homepage         = 'https://github.com/KiraSoga/QRReader'
