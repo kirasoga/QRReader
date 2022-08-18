@@ -1,0 +1,6 @@
+framework module QRReader {
+  umbrella header "QRReader-umbrella.h"
+
+  export *
+  module * { export * }
+}
