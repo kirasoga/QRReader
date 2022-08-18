@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import QRReader
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var a = MyClass()
+        print(a.a)
     }
 
     override func didReceiveMemoryWarning() {

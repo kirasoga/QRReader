@@ -82,7 +82,7 @@
 		91096B584690A4AB2ADE756319D2A474 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAA945E8CF42826A4817E58F5F850B8 /* World+DSL.swift */; };
 		915EA7F48607942BA78B96B434BE3E34 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45FCAB6E076A756A091672681BD3BFA /* Behavior.swift */; };
 		92DE6AC67462F0A507D3187892D4FA8A /* Equal+Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C727F39179CD2B17DD976E9844C63C9 /* Equal+Tuple.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		93099DAEE3CBF31CA63ACD01EB51FB28 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606FEFACAC9EA5D60314D5944D8AC6F7 /* ReplaceMe.swift */; };
+		93099DAEE3CBF31CA63ACD01EB51FB28 /* QrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606FEFACAC9EA5D60314D5944D8AC6F7 /* QrReader.swift */; };
 		961ADDC49C215FB5C58583C44BF6D8F8 /* String+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0BA53C7F0BFBA81255EE38BA9F571B /* String+C99ExtendedIdentifier.swift */; };
 		981F6B1579CE5D0BDB6E936DFC0B24F1 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB0A38A6A10FAB05552D83D306DEE0 /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		993ED0D1D74DDFAF99D4108636EFFA64 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCB178C889DE5A5F87362E8EA002AD7 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -161,7 +161,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B0B144D59482CE14B5A02547287F91 /* QRReader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = QRReader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		00B0B144D59482CE14B5A02547287F91 /* QRReader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = QRReader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		01599327494A8FBD4EC46C781EFC8BE3 /* Pods-QRReader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QRReader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		028C5C9AAB00433CC4E9D23B59FAB93C /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Quick.modulemap; sourceTree = "<group>"; };
 		0533BA6060A6659B1A5405E417AD4BC1 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/QuickObjectiveC/DSL/QCKDSL.h; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		0B18CC45CA460AA54B524885AC43FC46 /* BeResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeResult.swift; path = Sources/Nimble/Matchers/BeResult.swift; sourceTree = "<group>"; };
 		0B45B8866F896A1D4E16EA269D1491D9 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
 		0C727F39179CD2B17DD976E9844C63C9 /* Equal+Tuple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Equal+Tuple.swift"; path = "Sources/Nimble/Matchers/Equal+Tuple.swift"; sourceTree = "<group>"; };
-		0D631E9908483F9525A6B3F36F16CC61 /* Quick */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Quick; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EB0A38A6A10FAB05552D83D306DEE0 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Sources/Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
 		16C9158005ECCDD7E5E50D667F747869 /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
 		172BB982BCA0427B9B42EABFD8731C26 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
@@ -192,14 +192,14 @@
 		32703454A100A1EA3108CE43E8D5F606 /* NMBStringify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBStringify.h; path = Sources/NimbleObjectiveC/NMBStringify.h; sourceTree = "<group>"; };
 		359E7C21BBBD97FDD8EF230E728EBC17 /* Quick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Quick.h; path = Sources/QuickObjectiveC/Quick.h; sourceTree = "<group>"; };
 		3756750B9AD0146AE7AB1637B7A04F6A /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickObjCRuntime/include/QuickSpecBase.h; sourceTree = "<group>"; };
-		39FAA73271B1E3C9FC8E15576F98BB50 /* QRReader */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRReader; path = QRReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39FAA73271B1E3C9FC8E15576F98BB50 /* QRReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4283939DF34975E77412DB8884DE36 /* QRReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRReader-umbrella.h"; sourceTree = "<group>"; };
 		3F4B7A42760F95D50987E42BD6E399CD /* Quick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.release.xcconfig; sourceTree = "<group>"; };
 		3FE3C6B0EF06A5BDC213259D5F03B1B7 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		41ED7710C8C7101F486AAFBC6FA9B0AA /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
 		4A97749EFDAF71CC24E4754922DB02FA /* Pods-QRReader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QRReader_Example.modulemap"; sourceTree = "<group>"; };
 		4EA93F510D702F34EA61EBD4C92256D3 /* QRReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRReader.release.xcconfig; sourceTree = "<group>"; };
-		4F2EB561E828043ECAEF469019E36EAA /* Pods-QRReader_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-QRReader_Tests"; path = Pods_QRReader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F2EB561E828043ECAEF469019E36EAA /* Pods_QRReader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRReader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F35B11456C0F59E7012326C41C73653 /* Pods-QRReader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QRReader_Tests.modulemap"; sourceTree = "<group>"; };
 		5100F28739CC7C42E629FEFA59D6EDD6 /* ToSucceed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToSucceed.swift; path = Sources/Nimble/Matchers/ToSucceed.swift; sourceTree = "<group>"; };
 		52F65FA44C868EAEA97967B2662BE114 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		5AE669A1BDDE1D1C90673E95B22A92D9 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
 		5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5FAA945E8CF42826A4817E58F5F850B8 /* World+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "World+DSL.swift"; path = "Sources/Quick/DSL/World+DSL.swift"; sourceTree = "<group>"; };
-		606FEFACAC9EA5D60314D5944D8AC6F7 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = QRReader/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		606FEFACAC9EA5D60314D5944D8AC6F7 /* QrReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QrReader.swift; path = QRReader/Classes/QrReader.swift; sourceTree = "<group>"; };
 		60DF73375318419F11BEB13BB63F35B3 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		635845A511A3E3410254AB3267A2B70A /* Pods-QRReader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QRReader_Tests-dummy.m"; sourceTree = "<group>"; };
 		64227384F069F8A52D461F322BAF5D47 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/NimbleObjectiveC/NMBExceptionCapture.h; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 		99AB1F684C43C1BDD26621EFE5022B5E /* Callsite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Callsite.swift; path = Sources/Quick/Callsite.swift; sourceTree = "<group>"; };
 		9AB735BE887C17B9847328699EFBFE1C /* Pods-QRReader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QRReader_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9C6248B7B987D31D80DDB69233F738AF /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E64AE917D5700D3212AB976E9F81B24 /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Sources/Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
 		9F4CBC86AB7D81B050AF9E2BB9D2B5F5 /* QRReader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRReader-prefix.pch"; sourceTree = "<group>"; };
 		A03911E45674148516513B8B7AB90489 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 		A7A197CD2380265317256095BD209B5F /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		A7E4265253F0C2E2E88973422E9522FD /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
 		A83DB2FDCF978EEDF2D2D29B959D29A9 /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
-		A90F4172A70FA95079E1C27138C93367 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A90F4172A70FA95079E1C27138C93367 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AE1C96AA6B530E65DF71C6A98C66BAB4 /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
 		B0482C5E4D124D00B21256C1057D8F6A /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
 		B3D07D43542AC8C5EAED0B2D8C704884 /* CwlCatchException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlCatchException.m; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/CwlCatchException.m; sourceTree = "<group>"; };
@@ -264,11 +264,11 @@
 		B5E633974DC4BC87C004F19A9E150232 /* ExpectationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpectationMessage.swift; path = Sources/Nimble/ExpectationMessage.swift; sourceTree = "<group>"; };
 		B99CB5DF3ABD494232B206F7D64BB64B /* Closures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Closures.swift; path = Sources/Quick/Hooks/Closures.swift; sourceTree = "<group>"; };
 		BA5665FDCB2B3C3A6898E91EA73ACDB1 /* BeWithin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeWithin.swift; path = Sources/Nimble/Matchers/BeWithin.swift; sourceTree = "<group>"; };
-		BAE263041362D074978BB3B577DF0A05 /* Nimble */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB498CD57BEFE862EBD74D8918E5FC3 /* CwlMachBadInstructionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlMachBadInstructionHandler.m; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m; sourceTree = "<group>"; };
 		BDF890A2A4FC991DF458FC916054BE20 /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Sources/Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
 		BE6A933791731EFC288AE4AF1B83B9C2 /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
-		BF401D0393265E16B78BB6FE7BF0E456 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BF401D0393265E16B78BB6FE7BF0E456 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C15D7AAAEEDCB1F4AD61CEE85297AE76 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
 		C17D0C03EDECEC1C2E4312F449665003 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h; sourceTree = "<group>"; };
 		C24144935876D8D1564EA34EB103EC46 /* Pods-QRReader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QRReader_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -283,7 +283,7 @@
 		CEA8996188DC2C608835A84AF6065907 /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/QuickObjectiveC/QuickSpec.m; sourceTree = "<group>"; };
 		CEB97F8B51303B8A4890985DE1FFA1FE /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/NimbleObjectiveC/DSL.h; sourceTree = "<group>"; };
 		D18C2B33F65787C3DF9FBD891429A2E2 /* Predicate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Predicate.swift; path = Sources/Nimble/Matchers/Predicate.swift; sourceTree = "<group>"; };
-		D3ABFEC38C3DBDAD1E899CB347D2F372 /* Pods-QRReader_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-QRReader_Example"; path = Pods_QRReader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3ABFEC38C3DBDAD1E899CB347D2F372 /* Pods_QRReader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRReader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54DD6EC15668EF029409ECBF02A8BAB /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
 		D5E55C6B37B2AA0E7BD47C85B3897316 /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
 		D6FB990A1ED09361EDFC2B43B68366F2 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Sources/Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 		DDB66D4B9FD65233F3B9D7DB1BEB82B6 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
 		DE202D419BC5EEB5137C5E38CD6C6768 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Quick/DSL/DSL.swift; sourceTree = "<group>"; };
 		DF2CB10A6F3A82940081D20C4FBB374C /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
-		E1F209F1FD181A200553DD1642FF55A6 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
+		E1F209F1FD181A200553DD1642FF55A6 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
 		E4E45E6FB7E65ACB262E5F09BD1FF4E1 /* Pods-QRReader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QRReader_Example-umbrella.h"; sourceTree = "<group>"; };
 		E600618BFF6AC20A79DF665E00FA7955 /* SatisfyAllOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAllOf.swift; path = Sources/Nimble/Matchers/SatisfyAllOf.swift; sourceTree = "<group>"; };
 		E7545A2BD665B9DC1EAF19D157AC81C9 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
@@ -388,11 +388,11 @@
 		170EDC5AD3AC4A1180750795DC64D5E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BAE263041362D074978BB3B577DF0A05 /* Nimble */,
-				D3ABFEC38C3DBDAD1E899CB347D2F372 /* Pods-QRReader_Example */,
-				4F2EB561E828043ECAEF469019E36EAA /* Pods-QRReader_Tests */,
-				39FAA73271B1E3C9FC8E15576F98BB50 /* QRReader */,
-				0D631E9908483F9525A6B3F36F16CC61 /* Quick */,
+				BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */,
+				D3ABFEC38C3DBDAD1E899CB347D2F372 /* Pods_QRReader_Example.framework */,
+				4F2EB561E828043ECAEF469019E36EAA /* Pods_QRReader_Tests.framework */,
+				39FAA73271B1E3C9FC8E15576F98BB50 /* QRReader.framework */,
+				0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 		1FAEF2FD57D6D31309006B5E6BA9BE11 /* QRReader */ = {
 			isa = PBXGroup;
 			children = (
-				606FEFACAC9EA5D60314D5944D8AC6F7 /* ReplaceMe.swift */,
+				606FEFACAC9EA5D60314D5944D8AC6F7 /* QrReader.swift */,
 				B1C95FF75DD1E80C68E6F7F83F529483 /* Pod */,
 				917A78BAAC6E667A07137040264939FD /* Support Files */,
 			);
@@ -520,7 +520,6 @@
 				DA27CE34ECE6DD0D5620D5B5C7B36FE4 /* XCTestSuite+QuickTestSuiteBuilder.m */,
 				02E97CCA43A4EB9B6446441D52248F85 /* Support Files */,
 			);
-			name = Quick;
 			path = Quick;
 			sourceTree = "<group>";
 		};
@@ -637,7 +636,6 @@
 				83D7871471FC091A902FC96C597120FE /* XCTestObservationCenter+Register.m */,
 				77DC0A3DB7CE9A1C01D343CD3FB2C8C3 /* Support Files */,
 			);
-			name = Nimble;
 			path = Nimble;
 			sourceTree = "<group>";
 		};
@@ -723,7 +721,7 @@
 			);
 			name = Nimble;
 			productName = Nimble;
-			productReference = BAE263041362D074978BB3B577DF0A05 /* Nimble */;
+			productReference = BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C82891EAB7293DBEE916B21F57E8474D /* Quick */ = {
@@ -741,7 +739,7 @@
 			);
 			name = Quick;
 			productName = Quick;
-			productReference = 0D631E9908483F9525A6B3F36F16CC61 /* Quick */;
+			productReference = 0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D4B65DBDBAB9FD9A027ECD9AD5EC9C03 /* QRReader */ = {
@@ -759,7 +757,7 @@
 			);
 			name = QRReader;
 			productName = QRReader;
-			productReference = 39FAA73271B1E3C9FC8E15576F98BB50 /* QRReader */;
+			productReference = 39FAA73271B1E3C9FC8E15576F98BB50 /* QRReader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F04A453918426DE5A8FF56D81167BEE0 /* Pods-QRReader_Tests */ = {
@@ -780,7 +778,7 @@
 			);
 			name = "Pods-QRReader_Tests";
 			productName = Pods_QRReader_Tests;
-			productReference = 4F2EB561E828043ECAEF469019E36EAA /* Pods-QRReader_Tests */;
+			productReference = 4F2EB561E828043ECAEF469019E36EAA /* Pods_QRReader_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F7C80ECEB600023C3EF9B5ED09C4312B /* Pods-QRReader_Example */ = {
@@ -799,7 +797,7 @@
 			);
 			name = "Pods-QRReader_Example";
 			productName = Pods_QRReader_Example;
-			productReference = D3ABFEC38C3DBDAD1E899CB347D2F372 /* Pods-QRReader_Example */;
+			productReference = D3ABFEC38C3DBDAD1E899CB347D2F372 /* Pods_QRReader_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -809,7 +807,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D4B65DBDBAB9FD9A027ECD9AD5EC9C03 = {
+						LastSwiftMigration = 1340;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1000,7 +1003,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8990389A92CF55465AB53C718C0F67FF /* QRReader-dummy.m in Sources */,
-				93099DAEE3CBF31CA63ACD01EB51FB28 /* ReplaceMe.swift in Sources */,
+				93099DAEE3CBF31CA63ACD01EB51FB28 /* QrReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,7 +1053,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-QRReader_Example/Pods-QRReader_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-QRReader_Example/Pods-QRReader_Example.modulemap";
@@ -1082,7 +1085,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Quick/Quick-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				PRODUCT_MODULE_NAME = Quick;
@@ -1111,7 +1114,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				PRODUCT_MODULE_NAME = Nimble;
@@ -1143,7 +1146,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-QRReader_Tests/Pods-QRReader_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-QRReader_Tests/Pods-QRReader_Tests.modulemap";
@@ -1175,7 +1178,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				PRODUCT_MODULE_NAME = Nimble;
@@ -1240,13 +1243,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1268,7 +1270,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-QRReader_Example/Pods-QRReader_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-QRReader_Example/Pods-QRReader_Example.modulemap";
@@ -1301,7 +1303,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/QRReader/QRReader-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/QRReader/QRReader-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/QRReader/QRReader.modulemap";
 				PRODUCT_MODULE_NAME = QRReader;
@@ -1309,7 +1311,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1369,7 +1371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1398,7 +1400,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-QRReader_Tests/Pods-QRReader_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-QRReader_Tests/Pods-QRReader_Tests.modulemap";
@@ -1429,7 +1431,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Quick/Quick-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				PRODUCT_MODULE_NAME = Quick;
@@ -1461,7 +1463,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/QRReader/QRReader-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/QRReader/QRReader-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/QRReader/QRReader.modulemap";
 				PRODUCT_MODULE_NAME = QRReader;
@@ -1469,7 +1471,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
