@@ -213,10 +213,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = JBSFX35S2Z;
 						LastSwiftMigration = 1340;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = JBSFX35S2Z;
 						LastSwiftMigration = 1340;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -506,6 +508,7 @@
 			baseConfigurationReference = 259ECB86E1B8AC46B3E046B9 /* Pods-QRReader_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JBSFX35S2Z;
 				INFOPLIST_FILE = QRReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -521,6 +524,7 @@
 			baseConfigurationReference = EDB9B81086E04585F5035F11 /* Pods-QRReader_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JBSFX35S2Z;
 				INFOPLIST_FILE = QRReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -535,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6928B93E1A1A87AA73ACBEB4 /* Pods-QRReader_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = JBSFX35S2Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -557,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DFD16AD0CE101099364D762 /* Pods-QRReader_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = JBSFX35S2Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
