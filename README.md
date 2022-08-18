@@ -8,16 +8,19 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<br>
 サンプル プロジェクトを実行するには、リポジトリのクローンを作成し、最初にサンプル ディレクトリから「pod install」を実行します。
 
 ## Requirements(要件)
 ・iOS 13.0
+<br>
 ・Swift 5.0
 
 ## Installation(導入方法)
 
 QRReader is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
+<br>
 QRReader は [CocoaPods](https://cocoapods.org) から入手できます。インストールするには
 Podfile に次の行を追加するだけです。
 
@@ -28,9 +31,11 @@ pod 'QRReader'
 ## Author(作成者)
 
 KiraSoga, sogakira0202@gmail.com
+<br>
 曽我 滉
 
 ## License(ライセンス)
 
 QRReader is available under the MIT license. See the LICENSE file for more info.
+<br>
 QRReader は MIT ライセンスの下で利用できます。詳細については、LICENSE ファイルを参照してください。
