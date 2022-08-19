@@ -7,9 +7,9 @@
 
 import UIKit
 
-public class DashedBorderAroundView: UIView {
+class DashedBorderAroundView: UIView {
     
-    public override func layoutSublayers(of layer: CALayer) {
+    override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         
         if self.dashedBorderLayer.superlayer == nil {
