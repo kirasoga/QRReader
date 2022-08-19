@@ -36,28 +36,14 @@ create an instance
 ```Swift
 let myQRCodeReader = QRReader()
 ```
-Associating a delegate when loading the screen
+
+Show camera screen.Delegate is tied.(You can also set the reading range with frame)
+
 <br>
-画面読み込み時にdelegateの紐付けをする。
+カメラの画面を表示する。delegateの紐付けがされる。(frameで読み込み範囲の設定もできる)
 
 ```Swift
-self.myQRCodeReader.delegate = self
-```
-
-Show camera screen
-<br>
-カメラの画面を表示する。
-
-```Swift
-self.myQRCodeReader.setupCamera(view:self.view)
-```
-
-Specify camera range
-<br>
-カメラの範囲を指定する。
-
-```Swift
-self.myQRCodeReader.readRange()
+self.myQRCodeReader.setupCamera(vc:self)
 ```
 
 Processing when the QR code is read
@@ -72,15 +58,22 @@ QRコードを読み込んだ時の処理。
 func metadataOutput(_ output: AVCaptureMetadataOutput,
                     didOutput metadataObjects: [AVMetadataObject],
                     from connection: AVCaptureConnection) {
-    if let metadata = metadataObjects.first as? AVMetadataMachineReadableCodeObject{
-        let barCode = self.myQRCodeReader.previewLayer.transformedMetadataObject(for: metadata) as! AVMetadataMachineReadableCodeObject
-        self.myQRCodeReader.qrView.frame = barCode.bounds
-        //QRデータを表示
+    if let metadata = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
+        guard let barCode = self.myQRCodeReader.previewLayer.transformedMetadataObject(for: metadata),
+              let barCode = barCode as? AVMetadataMachineReadableCodeObject else {
+            return
+        }
+        // frame following mode(枠追従モード)
+        self.myQRCodeReader.followingBorder(barCode.bounds)
+        // stopCamera
+        self.myQRCodeReader.stopCamera()
+        
         if let str = metadata.stringValue {
-            print(str)
+              print(str)
         }
     }
 }
+
 ```
 
 ## Author(作成者)
