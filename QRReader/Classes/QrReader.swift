@@ -56,15 +56,18 @@ public class QRReader {
         self.qrView.layer.borderColor = borderColor.cgColor
         self.qrView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         if let v = self.preview {
-            v.addSubview(qrView)
+            v.addSubview(self.qrView)
         }
     }
     
-    //読み取り範囲の指定
-    public func readRange(frame: CGRect = CGRect(x: 0.2,
-                                                 y: 0.3,
-                                                 width: 0.6,
-                                                 height: 0.4)) {
+    // 読み取り範囲の指定
+    
+    /// 読み取り範囲の指定
+    /// - Parameter frame: 読み取り範囲。初期値0.25
+    public func readRange(frame: CGRect = CGRect(x: (1.0 - Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25)) / 2,
+                                                 y: (1.0 - 0.25) / 2,
+                                                 width: Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25),
+                                                 height: 0.25)) {
         
         self.metadataOutput.rectOfInterest = CGRect(x: frame.minY,
                                                     y: 1 - frame.minX - frame.size.width,
@@ -72,14 +75,19 @@ public class QRReader {
                                                     height: frame.size.width)
         
         let view = UIView()
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.red.cgColor
         if let preview = self.preview {
+            
+            
             view.frame = CGRect(x: preview.frame.size.width * frame.minX,
                                 y:  preview.frame.size.height * frame.minY,
                                 width: preview.frame.size.width * frame.size.width,
                                 height: preview.frame.size.height * frame.size.height)
+            
             preview.addSubview(view)
+            
+            let dView = DashedBorderAroundView(frame: view.frame)
+            dView.center = preview.center
+            preview.addSubview(dView)
         }
     }
     
