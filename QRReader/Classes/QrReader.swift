@@ -4,16 +4,17 @@ import AVFoundation
 public class QRReader {
     public init() {}
     
-    public let captureSession = AVCaptureSession()
-    public let videoDevice = AVCaptureDevice.default(for: .video)
-    public var metadataOutput = AVCaptureMetadataOutput()
+    private let captureSession = AVCaptureSession()
+    private let videoDevice = AVCaptureDevice.default(for: .video)
+    private var metadataOutput = AVCaptureMetadataOutput()
     
-    public var forwardDelegate: AVCaptureMetadataOutputObjectsDelegate?
-    public var preview: UIView?
+    private var forwardDelegate: AVCaptureMetadataOutputObjectsDelegate?
+    private var preview: UIView?
     public var previewLayer = AVCaptureVideoPreviewLayer()
-    public let qrView = UIView()
     
-    public var delegate: AVCaptureMetadataOutputObjectsDelegate? {
+    private var QrBorderView = UIView()
+    
+    private var delegate: AVCaptureMetadataOutputObjectsDelegate? {
         get { self.forwardDelegate }
         set(delegate) {
             self.forwardDelegate = delegate
@@ -21,9 +22,13 @@ public class QRReader {
         }
     }
     
-    public func setupCamera(view: UIView, borderWidth: Int = 2, borderColor: UIColor = .green) {
-        
-        self.preview = view
+    public func setupCamera(vc: UIViewController,
+                            frame: CGRect = CGRect(x: (1.0 - Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25)) / 2,
+                                                   y: (1.0 - 0.25) / 2,
+                                                   width: Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25),
+                                                   height: 0.25)) {
+        self.delegate = (vc as! AVCaptureMetadataOutputObjectsDelegate)
+        self.preview = vc.view
         
         do {
             let videoInput = try AVCaptureDeviceInput(device: self.videoDevice!) as AVCaptureDeviceInput
@@ -36,11 +41,24 @@ public class QRReader {
         
         self.metadataOutput.metadataObjectTypes = [.qr]
         
-        self.cameraPreview(view)
-        
-        self.targetCapture(borderWidth:borderWidth, borderColor: borderColor)
+        self.cameraPreview(vc.view)
         
         self.captureSession.startRunning()
+        
+        self.readRange(frame: frame)
+    }
+    
+    public func stopCamera() {
+        self.captureSession.stopRunning()
+    }
+    
+    public func restartCamera(_ frame: CGRect = CGRect(x: (1.0 - Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25)) / 2,
+                                                       y: (1.0 - 0.25) / 2,
+                                                       width: Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25),
+                                                       height: 0.25)) {
+        self.QrBorderView.removeFromSuperview()
+        self.captureSession.startRunning()
+        self.readRange(frame: frame)
     }
     
     // 画面に表示
@@ -51,44 +69,35 @@ public class QRReader {
         view.layer.addSublayer(self.previewLayer)
     }
     
-    private func targetCapture(borderWidth: Int, borderColor: UIColor) {
-        self.qrView.layer.borderWidth = CGFloat(borderWidth)
-        self.qrView.layer.borderColor = borderColor.cgColor
-        self.qrView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-        if let v = self.preview {
-            v.addSubview(self.qrView)
-        }
-    }
-    
-    // 読み取り範囲の指定
-    
     /// 読み取り範囲の指定
     /// - Parameter frame: 読み取り範囲。初期値0.25
-    public func readRange(frame: CGRect = CGRect(x: (1.0 - Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25)) / 2,
-                                                 y: (1.0 - 0.25) / 2,
-                                                 width: Double(UIScreen.main.nativeBounds.height / UIScreen.main.nativeBounds.width * 0.25),
-                                                 height: 0.25)) {
-        
+    public func readRange(frame: CGRect) {
         self.metadataOutput.rectOfInterest = CGRect(x: frame.minY,
                                                     y: 1 - frame.minX - frame.size.width,
                                                     width: frame.size.height,
                                                     height: frame.size.width)
         
-        let view = UIView()
         if let preview = self.preview {
-            
-            
-            view.frame = CGRect(x: preview.frame.size.width * frame.minX,
-                                y:  preview.frame.size.height * frame.minY,
-                                width: preview.frame.size.width * frame.size.width,
-                                height: preview.frame.size.height * frame.size.height)
-            
-            preview.addSubview(view)
-            
-            let dView = DashedBorderAroundView(frame: view.frame)
-            dView.center = preview.center
-            preview.addSubview(dView)
+            self.QrBorderView = QrBorderAroundView(frame: CGRect(x: preview.frame.size.width * frame.minX,
+                                                                 y:  preview.frame.size.height * frame.minY,
+                                                                 width: preview.frame.size.width * frame.size.width,
+                                                                 height: preview.frame.size.height * frame.size.height))
+            self.QrBorderView.center = preview.center
+            preview.addSubview(self.QrBorderView)
         }
+    }
+    
+    /// QRに追従させる
+    /// - Parameter cgRect: ボーダーの大きさ
+    public func followingBorder(_ cgRect: CGRect) {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseIn, animations: {
+            self.QrBorderView.removeFromSuperview()
+            if let preview = self.preview {
+                self.QrBorderView = QrBorderAroundView(frame: cgRect)
+                self.QrBorderView.frame = cgRect
+                preview.addSubview(self.QrBorderView)
+            }
+        }, completion: nil)
     }
     
     // オブジェクトを読み込んだ時のdelegate AVCaptureMetadataOutputObjectsDelegate.metadataOutput

@@ -123,7 +123,7 @@
 		EAF96483848B6E2554CBB684AEDB8550 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE202D419BC5EEB5137C5E38CD6C6768 /* DSL.swift */; };
 		F1D91144B0B756BA7723E0AE68ED6605 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DD6EC15668EF029409ECBF02A8BAB /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F2AD738671623FFDE4277046C7784188 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977085379345CD799607CC63B7FF6F2 /* HooksPhase.swift */; };
-		F30BF88928AF964200DFE61C /* DashedBorderAroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BF88828AF964200DFE61C /* DashedBorderAroundView.swift */; };
+		F30BF88928AF964200DFE61C /* QrBorderAroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BF88828AF964200DFE61C /* QrBorderAroundView.swift */; };
 		F8211C89835CD4106BCC584D260CF7C8 /* DispatchTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E2C7831890DE1BA4CB008A0D6505DF /* DispatchTimeInterval.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F94ED0C040D8EFE1B1227A464F81E92E /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E91A50E32399775B2F8C48434653A2 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F9A961CFA0E2BD3C6A94E282069AD80E /* BeWithin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5665FDCB2B3C3A6898E91EA73ACDB1 /* BeWithin.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -307,7 +307,7 @@
 		EBCB178C889DE5A5F87362E8EA002AD7 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Sources/Nimble/FailureMessage.swift; sourceTree = "<group>"; };
 		ECC8BA495BA58C8DC9FDC464CC417DAC /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/Nimble/Expression.swift; sourceTree = "<group>"; };
 		F18F4FB12630386391E5BAE4DDFD5184 /* Nimble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Info.plist"; sourceTree = "<group>"; };
-		F30BF88828AF964200DFE61C /* DashedBorderAroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashedBorderAroundView.swift; path = QRReader/Classes/DashedBorderAroundView.swift; sourceTree = "<group>"; };
+		F30BF88828AF964200DFE61C /* QrBorderAroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QrBorderAroundView.swift; path = QRReader/Classes/QrBorderAroundView.swift; sourceTree = "<group>"; };
 		F3C9A3A69A69EDD27829DED35846C332 /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/QuickObjectiveC/QuickSpec.h; sourceTree = "<group>"; };
 		F5C04C64D245E1339210F1BB25A00D58 /* QRReader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QRReader-Info.plist"; sourceTree = "<group>"; };
 		F6F08572F21242783622E4064A0F5588 /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Sources/Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
@@ -403,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				606FEFACAC9EA5D60314D5944D8AC6F7 /* QrReader.swift */,
-				F30BF88828AF964200DFE61C /* DashedBorderAroundView.swift */,
+				F30BF88828AF964200DFE61C /* QrBorderAroundView.swift */,
 				B1C95FF75DD1E80C68E6F7F83F529483 /* Pod */,
 				917A78BAAC6E667A07137040264939FD /* Support Files */,
 			);
@@ -1007,7 +1007,7 @@
 			files = (
 				8990389A92CF55465AB53C718C0F67FF /* QRReader-dummy.m in Sources */,
 				93099DAEE3CBF31CA63ACD01EB51FB28 /* QrReader.swift in Sources */,
-				F30BF88928AF964200DFE61C /* DashedBorderAroundView.swift in Sources */,
+				F30BF88928AF964200DFE61C /* QrBorderAroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

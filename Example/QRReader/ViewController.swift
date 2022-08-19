@@ -16,10 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.myQRCodeReader.delegate = self
-        self.myQRCodeReader.setupCamera(view:self.view)
-        //読み込めるカメラ範囲
-        self.myQRCodeReader.readRange()
+        self.myQRCodeReader.setupCamera(vc: self)
     }
 }
 
@@ -29,19 +26,31 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate{
                         didOutput metadataObjects: [AVMetadataObject],
                         from connection: AVCaptureConnection) {
         //一画面上に複数のQRがある場合、複数読み込むが今回は便宜的に先頭のオブジェクトを処理
-        if let metadata = metadataObjects.first as? AVMetadataMachineReadableCodeObject{
-            let barCode = self.myQRCodeReader.previewLayer.transformedMetadataObject(for: metadata) as! AVMetadataMachineReadableCodeObject
-            //読み込んだQRを映像上で枠を囲む。ユーザへの通知。必要な時は記述しなくてよい。
-            self.myQRCodeReader.qrView.frame = barCode.bounds
-            //QRデータを表示
-            if let str = metadata.stringValue {
-                print(str)
-                let alert = UIAlertController(title: "スキャン完了",
-                                              message: str,
-                                              preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default)
-                alert.addAction(okAction)
-                self.present(alert, animated: true)
+        if let metadata = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
+            guard let barCode = self.myQRCodeReader.previewLayer.transformedMetadataObject(for: metadata),
+                  let barCode = barCode as? AVMetadataMachineReadableCodeObject else {
+                return
+            }
+            // 枠追従モード
+            self.myQRCodeReader.followingBorder(barCode.bounds)
+            // スキャン完了時にCameraのスキャンを停止
+            self.myQRCodeReader.stopCamera()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                //QRデータを表示
+                if let str = metadata.stringValue {
+                    print(str)
+                    let alert = UIAlertController(title: "スキャン完了",
+                                                  message: str,
+                                                  preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default)
+                    let restartAction = UIAlertAction(title: "再起動", style: .default, handler: {_ in 
+                        self.myQRCodeReader.restartCamera()
+                    })
+                    alert.addAction(okAction)
+                    alert.addAction(restartAction)
+                    self.present(alert, animated: true)
+                }
             }
         }
     }
