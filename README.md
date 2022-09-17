@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/QRReader.svg?style=flat)](https://cocoapods.org/pods/QRReader)
 [![Platform](https://img.shields.io/cocoapods/p/QRReader.svg?style=flat)](https://cocoapods.org/pods/QRReader)
 
+## demo
+![Videotogif (1)](https://user-images.githubusercontent.com/57799569/190841396-ca8f7138-6e14-4de6-ada0-6b7f302d5cbc.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
